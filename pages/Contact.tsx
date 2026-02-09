@@ -33,7 +33,7 @@ const Contact: React.FC = () => {
               <p className="text-gray-600 mb-4">NJU数智史学实验室</p>
               <div className="w-480 h-48 bg-gray-100 rounded-lg overflow-hidden border border-gray-200">
                   <img 
-                      src="images/扫码_搜索联合传播样式-白色版.png" 
+                      src="images/qrcode.png" 
                       alt="NJU数智史学实验室公众号" 
                       className="w-full h-full object-cover"
                   />
