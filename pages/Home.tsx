@@ -19,11 +19,11 @@ const Home: React.FC = () => {
         
         <div className="relative z-10 max-w-3xl">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
-            连接过去与未来
+            史册新生·万卷可及
           </h1>
           <p className="text-primary-100 text-lg md:text-xl leading-relaxed max-w-2xl">
-            南京大学数智史学实验室致力于运用前沿数字技术，探索历史研究的新范式。
-            我们关注历史大数据的构建、空间历史分析以及数字人文工具的开发。
+               南京大学数智文献实验室成立于2024年，依托南京大学数字史学研究中心。致力于打造人工智能时代的史学文献处理与研究平台。
+
           </p>
           <div className="mt-8 flex gap-4">
             <Link to="/about" className="bg-white text-primary-800 px-6 py-2 rounded-full font-semibold hover:bg-primary-50 transition-colors shadow-lg">

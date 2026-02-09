@@ -10,6 +10,8 @@ import Contact from './pages/Contact';
 import NewsList from './pages/NewsList';
 import NewsDetail from './pages/NewsDetail';
 import ProjectDetail from './pages/ProjectDetail';
+import CourseDetail from './pages/CourseDetail';
+import StudentProjectDetail from './pages/StudentProjectDetail';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="news" element={<NewsList />} />
           <Route path="news/:id" element={<NewsDetail />} />
           <Route path="teaching" element={<Teaching />} />
+          <Route path="teaching/course-detail" element={<CourseDetail />} />
+          <Route path="teaching/student-project-detail" element={<StudentProjectDetail />} />
           <Route path="contact" element={<Contact />} />
         </Route>
       </Routes>

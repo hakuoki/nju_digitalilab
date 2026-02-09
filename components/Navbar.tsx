@@ -25,8 +25,8 @@ const Navbar: React.FC = () => {
                <Globe className="h-8 w-8 text-primary-200" />
             </div>
             <div className="flex flex-col">
-              <span className="text-xl font-bold tracking-wider">数智史学实验室</span>
-              <span className="text-xs text-primary-200 uppercase tracking-widest">NJU Digital History Lab</span>
+              <span className="text-xl font-bold tracking-wider">南京大学数智文献实验室</span>
+              <span className="text-sm text-primary-200">Digital and Intelligent Literature Lab at NJU</span>
             </div>
           </div>
 

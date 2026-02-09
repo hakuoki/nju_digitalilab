@@ -1,6 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { COURSES_DATA } from '../data';
-import { GraduationCap } from 'lucide-react';
+import { GraduationCap, ArrowRight, FileText } from 'lucide-react';
+
+const STUDENT_CASES = [
+  { id: 1, title: "AI助力下战争行军图绘制的初步探索", link: "student-project-detail" },
+];
 
 const Teaching: React.FC = () => {
   return (
@@ -8,12 +13,12 @@ const Teaching: React.FC = () => {
        <div className="text-center mb-12">
         <h1 className="text-3xl font-bold text-gray-900 mb-4">教学与人才培养</h1>
         <p className="text-gray-600 max-w-2xl mx-auto">
-          实验室依托南京大学历史学院，开设了一系列数字人文特色课程，致力于培养具备文理交叉视野的复合型历史研究人才。
+          南京大学数智文献实验室将数字技术与AI技术融入历史教学，开设了一系列数字人文特色课程、讲座、沙龙，致力于培养具备文理交叉视野的复合型历史研究人才。
         </p>
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-        {COURSES_DATA.map((course) => (
+      <div className="max-w-4xl mx-auto">
+        {COURSES_DATA.slice(0, 1).map((course) => (
           <div key={course.id} className="flex flex-col bg-white rounded-lg shadow-md border border-gray-100 hover:shadow-lg hover:border-primary-200 transition-all">
             <div className="p-6 flex-grow">
               <div className="flex justify-between items-start mb-4">
@@ -32,22 +37,45 @@ const Teaching: React.FC = () => {
               </p>
             </div>
             <div className="bg-gray-50 px-6 py-4 border-t border-gray-100 rounded-b-lg">
-              <button className="text-primary-600 text-sm font-semibold hover:text-primary-800 transition-colors">
-                查看课程大纲 &rarr;
-              </button>
+              <Link to="course-detail" className="flex items-center text-primary-600 text-sm font-semibold hover:text-primary-800 transition-colors">
+                查看课程大纲 <ArrowRight className="w-4 h-4 ml-1" />
+              </Link>
             </div>
           </div>
         ))}
       </div>
 
-      <div className="mt-16 bg-gradient-to-br from-purple-900 to-indigo-900 rounded-2xl p-8 md:p-12 text-white text-center">
-         <h2 className="text-2xl font-bold mb-4">学生科研训练计划</h2>
-         <p className="text-primary-100 mb-8 max-w-2xl mx-auto">
-           实验室每年面向全校本科生开放"数字人文创新训练项目"申请，提供数据支持与技术指导。
-         </p>
-         <button className="bg-white text-primary-900 px-8 py-3 rounded-full font-bold hover:bg-primary-50 transition-colors shadow-lg">
-           申请加入
-         </button>
+      <div className="mt-16 relative overflow-hidden bg-gradient-to-br from-primary-900 via-primary-800 to-primary-900 rounded-2xl p-8 md:p-12 text-white shadow-2xl max-w-4xl mx-auto">
+         {/* Decorative blobs for modern look */}
+         <div className="absolute top-0 right-0 -mt-20 -mr-20 w-80 h-80 bg-white/5 rounded-full blur-3xl pointer-events-none"></div>
+         <div className="absolute bottom-0 left-0 -mb-20 -ml-20 w-80 h-80 bg-primary-500/20 rounded-full blur-3xl pointer-events-none"></div>
+
+         <div className="relative z-10">
+            <h2 className="text-2xl font-bold mb-8 text-center">学生课程实践案例展示</h2>
+            <div>
+              {STUDENT_CASES.slice(0, 1).map((item) => (
+                <Link key={item.id} to="student-project-detail" className="block group">
+                  <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:bg-white/20 hover:scale-[1.01] transition-all duration-300 flex items-center justify-between shadow-lg">
+                    <div className="flex items-center">
+                      <div className="p-3 bg-white/10 rounded-full mr-5 border border-white/20">
+                          <FileText className="w-6 h-6 text-white" />
+                      </div>
+                      <div>
+                        <span className="block text-xl font-bold text-white mb-2">{item.title}</span>
+                        <div className="flex items-center space-x-2 text-sm text-primary-100">
+                          <span className="bg-primary-500/40 px-2 py-0.5 rounded text-xs border border-primary-400/30">优秀案例</span>
+                          <span>点击查看详细报告</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-white/10 p-2 rounded-full group-hover:bg-white/20 transition-colors">
+                       <ArrowRight className="w-5 h-5 text-white transform group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+         </div>
       </div>
     </div>
   );
