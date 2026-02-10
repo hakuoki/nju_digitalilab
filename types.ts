@@ -8,6 +8,13 @@ export interface NewsItem {
   link?: string;
 }
 
+export interface Group {
+  id: string;
+  title: string;
+  description: string;
+  link?: string;
+}
+
 export interface Publication {
   id: string;
   title: string;
@@ -33,6 +40,7 @@ export interface Member {
   title: string;
   image: string;
   researchInterests: string[];
+  personalPage?: string;
 }
 
 export interface Project {

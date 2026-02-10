@@ -15,7 +15,7 @@ const ProjectDetail: React.FC = () => {
     <div className="max-w-4xl mx-auto">
       <Link to="/research" className="inline-flex items-center text-primary-600 hover:text-primary-800 mb-6 transition-colors font-medium">
         <ChevronLeft className="w-5 h-5 mr-1" />
-        返回科研项目
+        返回平台成果
       </Link>
 
       <div className="bg-white rounded-xl shadow-lg overflow-hidden border-t-4 border-primary-600">
@@ -24,13 +24,13 @@ const ProjectDetail: React.FC = () => {
              <div className="flex-1">
                <div className="flex items-center gap-2 mb-4 text-sm font-medium text-primary-600">
                   <Layers className="w-5 h-5" />
-                  <span>重点科研项目</span>
+                  <span>学术社区</span>
                </div>
                <h1 className="text-3xl font-bold text-gray-900 mb-4">{project.title}</h1>
                <div className="flex flex-wrap gap-6 text-sm text-gray-600">
                   <span className="flex items-center">
                     <Clock className="w-4 h-4 mr-2 text-primary-400" />
-                    项目周期: {project.duration}
+                    相关群组: {project.duration}
                   </span>
                   <span className={`flex items-center px-2 py-0.5 rounded ${
                     project.status === 'Ongoing' ? 'bg-green-100 text-green-700' : 'bg-gray-100 text-gray-600'
@@ -45,12 +45,12 @@ const ProjectDetail: React.FC = () => {
 
         <div className="p-8 md:p-12">
            <div className="mb-8 p-6 bg-primary-50 rounded-lg border border-primary-100">
-              <h3 className="text-sm font-bold text-primary-800 uppercase tracking-wide mb-2">项目摘要</h3>
+              <h3 className="text-sm font-bold text-primary-800 uppercase tracking-wide mb-2">项目简介</h3>
               <p className="text-gray-700">{project.description}</p>
            </div>
            
            <div className="prose prose-purple max-w-none text-gray-800"
-              dangerouslySetInnerHTML={{ __html: project.content || '<p>暂无详细介绍。</p>' }}
+              dangerouslySetInnerHTML={{ __html: project.content || '<p>学术社区建设中，敬请期待。</p>' }}
            />
         </div>
       </div>

@@ -21,7 +21,7 @@ const Contact: React.FC = () => {
              <Mail className="w-5 h-5 text-primary-500 mr-2" />
              邮箱
            </h3>
-           <p className="text-gray-600 pl-7">digitalilab@163.com</p>
+           <p className="text-gray-600 pl-7">{LAB_INFO.email}</p>
          </div>
 
          <div>

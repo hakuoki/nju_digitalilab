@@ -9,8 +9,8 @@ const Navbar: React.FC = () => {
     { name: '主页', path: '/' },
     { name: '实验室简介', path: '/about' },
     { name: '人员', path: '/people' },
-    { name: '新闻 & 会议', path: '/news' },
-    { name: '研究成果', path: '/research' },
+    { name: '新闻动态', path: '/news' },
+    { name: '平台成果', path: '/research' },
     { name: '教学 & 课程', path: '/teaching' },
     { name: '联系我们', path: '/contact' },
   ];

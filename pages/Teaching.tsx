@@ -55,9 +55,9 @@ const Teaching: React.FC = () => {
             <div>
               {STUDENT_CASES.slice(0, 1).map((item) => (
                 <Link key={item.id} to="student-project-detail" className="block group">
-                  <div className="bg-white/10 backdrop-blur-md border border-white/10 rounded-xl p-6 hover:bg-white/20 hover:scale-[1.01] transition-all duration-300 flex items-center justify-between shadow-lg">
+                  <div className="bg-white/10 backdrop-blur-md border border-white/50 rounded-xl p-6 hover:bg-white/20 hover:scale-[1.01] transition-all duration-300 flex items-center justify-between shadow-lg">
                     <div className="flex items-center">
-                      <div className="p-3 bg-white/10 rounded-full mr-5 border border-white/20">
+                      <div className="p-3 bg-white/50 rounded-full mr-5 border border-white/20">
                           <FileText className="w-6 h-6 text-white" />
                       </div>
                       <div>
