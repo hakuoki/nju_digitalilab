@@ -13,7 +13,7 @@ const Research: React.FC = () => {
            <a href="https://www.digitalilab.cn/" target="_blank" rel="noopener noreferrer" className="md:w-5/12 relative overflow-hidden h-64 md:h-auto block">
              <div className="absolute inset-0 bg-primary-900/10 group-hover:bg-transparent transition-colors z-10"></div>
              <img 
-               src="/images/LAB.png" 
+               src="images/LAB.png" 
                alt="数智文献处理平台" 
                className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-700"
                onError={(e) => {
