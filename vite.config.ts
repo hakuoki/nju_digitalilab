@@ -5,4 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig({
   plugins: [react()],
   base: './', // 确保部署到 GitHub Pages 子目录时路径正确
+  build: {
+    target: 'es2015', // 兼容较低版本的浏览器（有些旧版 Safari 默认不支持新的 ES 特性）
+  },
 });
