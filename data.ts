@@ -107,6 +107,13 @@ export const MEMBERS_DATA: Member[] = [
     researchInterests: ['中共党史', '数字史学'],
     personalPage: 'https://history.nju.edu.cn/jbw1/main.htm'
   },
+  {
+    id: '2',
+    name: '林哲远',
+    title: '博士生',
+    image: 'images/linzheyuan.jpg',
+    researchInterests: ['软件工程'],
+  },
 ];
 
 // 学术社区
