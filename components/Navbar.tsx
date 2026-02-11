@@ -8,7 +8,7 @@ const Navbar: React.FC = () => {
   const navItems = [
     { name: '主页', path: '/' },
     { name: '实验室简介', path: '/about' },
-    { name: '人员', path: '/people' },
+    { name: '研究团队', path: '/people' },
     { name: '新闻动态', path: '/news' },
     { name: '平台成果', path: '/research' },
     { name: '教学 & 课程', path: '/teaching' },

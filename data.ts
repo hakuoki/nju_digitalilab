@@ -103,15 +103,30 @@ export const MEMBERS_DATA: Member[] = [
     id: '1',
     name: '金伯文',
     title: '助理教授 / 实验室主任',
-    image: 'images/jbw1.jpg',
+    image: 'images/jbw2.jpg',
     researchInterests: ['中共党史', '数字史学'],
     personalPage: 'https://history.nju.edu.cn/jbw1/main.htm'
   },
   {
     id: '2',
+    name: '李庆',
+    title: '副教授',
+    image: 'images/lq.jpg',
+    researchInterests: ['明清中外关系史', '海洋史','天主教史'],
+    personalPage: 'https://history.nju.edu.cn/lq1/main.htm'
+  },
+  {
+    id: '3',
     name: '林哲远',
     title: '博士生',
     image: 'images/linzheyuan.jpg',
+    researchInterests: ['软件工程'],
+  },
+  {
+    id: '4',
+    name: '刘畅',
+    title: '硕士生/系统主要开发与运维人员',
+    image: 'images/liuchang.jpg',
     researchInterests: ['软件工程'],
   },
 ];
