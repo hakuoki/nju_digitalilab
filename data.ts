@@ -131,6 +131,27 @@ export const MEMBERS_DATA: Member[] = [
   },
 ];
 
+// 学术顾问
+export const ADVISORS_DATA: Member[] = [
+  {
+    id: '1',
+    name: '华涛',
+    title: '荣退教授/学术顾问',
+    image: 'images/huat.jpg', // Placeholder or reuse an existing one if unsure, but user can change it. Better to leave empty string or specific placeholder.
+    researchInterests: ['西域史', '中国民族史','中国边疆发展史','中西交通史'],
+    personalPage: 'https://history.nju.edu.cn/ht/main.htm'
+  },
+  {
+    id: '2',
+    name: '王涛',
+    title: '教授/学术顾问',
+    image: 'images/wangtao.png',
+    researchInterests: ['德国史','教会史','数字史学'],
+    personalPage: 'https://history.nju.edu.cn/wt/main.htm'
+  },
+];
+
+
 // 学术社区
 export const PROJECTS_DATA: Project[] = [
   {

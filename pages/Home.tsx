@@ -1,13 +1,17 @@
 import React from 'react';
 import SectionCard from '../components/SectionCard';
-import { NEWS_DATA, GROUPS_DATA, MEMBERS_DATA, PROJECTS_DATA } from '../data';
+import { NEWS_DATA, GROUPS_DATA, MEMBERS_DATA, ADVISORS_DATA, PROJECTS_DATA } from '../data';
 import { Calendar, FileText, User, Layers, ArrowRight, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
   const recentNews = NEWS_DATA.slice(0, 4);
   const featuredGroups = GROUPS_DATA.slice(0, 5);
-  const featuredMembers = MEMBERS_DATA.slice(0, 4);
+  
+  // Combine Research Team (1-4) and Advisors (1-2)
+  const researchTeam = MEMBERS_DATA.slice(0, 4);
+  const advisors = ADVISORS_DATA.slice(0, 2);
+  const featuredMembers = [...researchTeam, ...advisors];
 
   return (
     <div className="space-y-8">
@@ -109,7 +113,7 @@ const Home: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
         
         {/* Left Column (News & Events) - Spans 8 columns on desktop */}
-        <div className="md:col-span-8 space-y-6">
+        <div className="md:col-span-7 space-y-6">
           <SectionCard title="新闻动态" linkTo="/news" className="h-full">
             <div className="space-y-4">
               {recentNews.map((news) => {
@@ -142,12 +146,13 @@ const Home: React.FC = () => {
           </SectionCard>
         </div>
 
+
         {/* Right Column (People) - Spans 4 columns */}
-        <div className="md:col-span-4">
+        <div className="md:col-span-5">
           <SectionCard title="研究团队" linkTo="/people">
-            <div className="grid grid-cols-2 gap-4">
-              {featuredMembers.map((member) => (
-                <Link to="/people" key={member.id} className="text-center group block">
+            <div className="grid grid-cols-3 gap-4">
+              {featuredMembers.map((member, index) => (
+                <Link to="/people" key={`${member.id}-${index}`} className="text-center group block">
                   <div className="relative inline-block">
                     <img 
                       src={member.image} 

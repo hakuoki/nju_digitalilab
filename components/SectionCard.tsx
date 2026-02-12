@@ -18,8 +18,9 @@ const SectionCard: React.FC<SectionCardProps> = ({ title, linkTo, children, clas
           {title}
         </h3>
         {linkTo && (
-          <Link to={linkTo} className="text-primary-500 hover:text-primary-700 hover:translate-x-1 transition-all">
-            <ChevronRight className="h-5 w-5" />
+          <Link to={linkTo} className="text-primary-500 hover:text-primary-700 hover:translate-x-1 transition-all flex items-center text-sm">
+            <span>查看更多</span>
+            <ChevronRight className="h-4 w-4" />
           </Link>
         )}
       </div>
