@@ -187,15 +187,17 @@ const Home: React.FC = () => {
                    <div className="w-1 h-3 bg-purple-500 rounded-full"></div>
                    <h4 className="text-xs font-bold text-gray-500 tracking-wide">学术顾问</h4>
                 </div>
-                <div className="flex flex-col justify-around flex-grow py-2">
+                <div className="grid grid-cols-1 gap-y-4">
                   {advisors.map((advisor) => (
                     <Link to="/people" key={advisor.id} className="flex flex-col items-center text-center group">
                        <div className="relative mb-2">
-                          <img 
-                            src={advisor.image} 
-                            alt={advisor.name} 
-                            className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm group-hover:border-purple-300 transition-colors"
-                          />
+                         <div className="p-0.5 rounded-full bg-gradient-to-tr from-primary-100 to-white group-hover:from-primary-300 group-hover:to-primary-100 transition-all shadow-sm">
+                            <img 
+                              src={advisor.image} 
+                              alt={advisor.name} 
+                              className="w-14 h-14 rounded-full object-cover border-2 border-white"
+                            />
+                         </div>
                        </div>
                        <h4 className="text-xs font-bold text-gray-800 group-hover:text-purple-700 mb-0.5">{advisor.name}</h4>
                        <p className="text-[10px] text-gray-500">教授/学术顾问</p>
