@@ -98,11 +98,15 @@ const Home: React.FC = () => {
                南京大学数智文献实验室成立于2024年，依托南京大学数字史学研究中心。致力于打造人工智能时代的史学文献处理与研究平台。
 
           </p>
-          <div className="mt-8 flex gap-4">
-            <Link to="/about" className="bg-white text-primary-800 px-6 py-2 rounded-full font-semibold hover:bg-primary-50 transition-colors shadow-lg">
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a href="https://www.digitalilab.cn/" target="_blank" rel="noopener noreferrer" className="bg-white text-primary-900 px-6 py-2.5 rounded-full font-bold hover:bg-gray-50 transition-all shadow-lg hover:shadow-xl flex items-center gap-2">
+               进入数智文献处理平台
+               <ArrowRight className="w-4 h-4" />
+            </a>
+            <Link to="/about" className="bg-primary-600 text-white border border-primary-500 px-6 py-2.5 rounded-full font-semibold hover:bg-primary-500 transition-colors shadow-md">
               了解更多
             </Link>
-            <Link to="/contact" className="bg-primary-700 text-white border border-primary-500 px-6 py-2 rounded-full font-semibold hover:bg-primary-600 transition-colors">
+            <Link to="/contact" className="bg-transparent text-primary-100 border border-primary-400/50 px-6 py-2.5 rounded-full font-semibold hover:bg-white/10 hover:text-white transition-colors">
               联系我们
             </Link>
           </div>
@@ -147,23 +151,59 @@ const Home: React.FC = () => {
         </div>
 
 
-        {/* Right Column (People) - Spans 4 columns */}
+        {/* Right Column (People) - Spans 5 columns */}
         <div className="md:col-span-5">
-          <SectionCard title="研究团队" linkTo="/people">
-            <div className="grid grid-cols-3 gap-4">
-              {featuredMembers.map((member, index) => (
-                <Link to="/people" key={`${member.id}-${index}`} className="text-center group block">
-                  <div className="relative inline-block">
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
-                      className="w-20 h-20 rounded-full object-cover mx-auto mb-2 border-2 border-primary-100 group-hover:border-primary-400 transition-colors shadow-sm"
-                    />
-                  </div>
-                  <h4 className="font-bold text-gray-800 group-hover:text-primary-700">{member.name}</h4>
-                  <p className="text-xs text-gray-500">{member.title}</p>
-                </Link>
-              ))}
+          <SectionCard title="人员" linkTo="/people">
+            <div className="flex h-full divide-x divide-gray-100">
+              
+              {/* Left: Research Team (4 people) */}
+              <div className="flex-1 pr-2">
+                <div className="flex items-center gap-2 mb-3">
+                   <div className="w-1 h-3 bg-primary-500 rounded-full"></div>
+                   <h4 className="text-xs font-bold text-gray-500 tracking-wide">研究团队</h4>
+                </div>
+                <div className="grid grid-cols-2 gap-y-4">
+                  {researchTeam.map((member) => (
+                    <Link to="/people" key={member.id} className="flex flex-col items-center text-center group">
+                      <div className="relative mb-2">
+                         <div className="p-0.5 rounded-full bg-gradient-to-tr from-primary-100 to-white group-hover:from-primary-300 group-hover:to-primary-100 transition-all shadow-sm">
+                            <img 
+                              src={member.image} 
+                              alt={member.name} 
+                              className="w-14 h-14 rounded-full object-cover border-2 border-white"
+                            />
+                         </div>
+                      </div>
+                      <h4 className="text-xs font-bold text-gray-800 group-hover:text-primary-700 mb-0.5">{member.name}</h4>
+                      <p className="text-[10px] text-gray-500 px-1 leading-tight line-clamp-2">{member.title}</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
+              {/* Right: Advisors (2 people) */}
+              <div className="w-[32%] pl-2 flex flex-col">
+                 <div className="flex items-center gap-2 mb-3">
+                   <div className="w-1 h-3 bg-purple-500 rounded-full"></div>
+                   <h4 className="text-xs font-bold text-gray-500 tracking-wide">学术顾问</h4>
+                </div>
+                <div className="flex flex-col justify-around flex-grow py-2">
+                  {advisors.map((advisor) => (
+                    <Link to="/people" key={advisor.id} className="flex flex-col items-center text-center group">
+                       <div className="relative mb-2">
+                          <img 
+                            src={advisor.image} 
+                            alt={advisor.name} 
+                            className="w-12 h-12 rounded-full object-cover border-2 border-white shadow-sm group-hover:border-purple-300 transition-colors"
+                          />
+                       </div>
+                       <h4 className="text-xs font-bold text-gray-800 group-hover:text-purple-700 mb-0.5">{advisor.name}</h4>
+                       <p className="text-[10px] text-gray-500">教授/学术顾问</p>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+
             </div>
           </SectionCard>
         </div>
@@ -280,3 +320,6 @@ const Home: React.FC = () => {
 };
 
 export default Home;
+
+
+//此处研究团队卡片展示逻辑为，研究团队4+学术顾问2，共6人。
