@@ -90,6 +90,13 @@ const Home: React.FC = () => {
         <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-primary-500 rounded-full mix-blend-screen filter blur-[80px] opacity-30 animate-blob animation-delay-2000"></div>
         <div className="absolute top-1/2 left-1/3 w-64 h-64 bg-pink-500 rounded-full mix-blend-screen filter blur-[100px] opacity-20 animate-blob animation-delay-4000"></div>
         
+
+        {/* Logos - Top Right */}
+        <div className="absolute top-6 right-6 md:top-12 md:right-12 z-20 hidden md:flex items-center gap-4 opacity-90">
+             <img src="/images/logo2.png" alt="Logo" className="h-10 md:h-14 w-auto drop-shadow-md" />
+             <img src="/images/logo1.png" alt="Logo" className="h-12 md:h-16 w-auto drop-shadow-md" />
+        </div>
+
         <div className="relative z-10 max-w-3xl">
           <h1 className="text-3xl md:text-5xl font-bold mb-4 tracking-tight">
             史册新生·万卷可及
