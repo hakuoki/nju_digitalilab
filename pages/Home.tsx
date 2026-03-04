@@ -93,8 +93,8 @@ const Home: React.FC = () => {
 
         {/* Logos - Top Right */}
         <div className="absolute top-6 right-6 md:top-12 md:right-12 z-20 hidden md:flex items-center gap-4 opacity-90">
-             <img src="/images/logo2.png" alt="Logo" className="h-10 md:h-14 w-auto drop-shadow-md" />
-             <img src="/images/logo1.png" alt="Logo" className="h-12 md:h-16 w-auto drop-shadow-md" />
+             <img src="images/logo2.png" alt="Logo" className="h-10 md:h-14 w-auto drop-shadow-md" />
+             <img src="images/logo1.png" alt="Logo" className="h-12 md:h-16 w-auto drop-shadow-md" />
         </div>
 
         <div className="relative z-10 max-w-3xl">
