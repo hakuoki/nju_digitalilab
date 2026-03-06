@@ -5,7 +5,9 @@ import { Calendar, FileText, User, Layers, ArrowRight, Users, Award } from 'luci
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
-  const recentNews = NEWS_DATA.slice(0, 4);
+  const recentNews = [...NEWS_DATA]
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+    .slice(0, 4);
   const featuredGroups = GROUPS_DATA.slice(0, 5);
   
   // Combine Research Team (1-4) and Advisors (1-2)
@@ -133,9 +135,15 @@ const Home: React.FC = () => {
                     <div className="flex-1 pr-4">
                       <span className={`inline-block text-xs font-bold px-2 py-0.5 rounded mr-2 ${
                         news.category === 'Event' ? 'bg-orange-100 text-orange-700' : 
-                        news.category === 'Notice' ? 'bg-red-100 text-red-700' : 'bg-primary-100 text-primary-700'
+                        news.category === 'Notice' ? 'bg-red-100 text-red-700' : 
+                        news.category === 'News' ? 'bg-green-100 text-green-700' :
+                        news.category === 'Intro' ? 'bg-blue-100 text-blue-700' :
+                        'bg-primary-100 text-primary-700'
                       }`}>
-                        {news.category === 'Event' ? '会议' : news.category === 'Notice' ? '通知' : '新闻'}
+                        {news.category === 'Event' ? '会议' : 
+                         news.category === 'Notice' ? '通知' : 
+                         news.category === 'News' ? '新闻' :
+                         news.category === 'Intro' ? '介绍' : '新闻'}
                       </span>
                       <span className="text-gray-700 font-medium group-hover:text-primary-700 transition-colors">{news.title}</span>
                     </div>

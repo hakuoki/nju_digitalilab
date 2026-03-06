@@ -16,18 +16,32 @@ const NewsList: React.FC = () => {
          {sortedNews.map((item) => {
            const content = (
              <div className="bg-white p-6 rounded-lg shadow-sm group-hover:shadow-md transition-all duration-300 border border-gray-100 flex flex-col md:flex-row gap-4 group-hover:border-primary-200">
-                <div className="md:w-32 flex-shrink-0 flex flex-col text-center justify-center bg-primary-50 rounded p-2 group-hover:bg-primary-100 transition-colors">
-                   <span className="text-sm text-gray-500">{item.date.split('-')[0]}</span>
-                   <span className="text-xl font-bold text-primary-700">{item.date.split('-').slice(1).join('/')}</span>
+                <div className="md:w-32 flex-shrink-0 relative overflow-hidden flex flex-col text-center justify-center bg-primary-50 rounded p-2 group-hover:bg-primary-100 transition-colors h-24 md:h-auto min-h-[6rem]">
+                   {item.image && (
+                     <img 
+                       src={item.image} 
+                       alt="" 
+                       className="absolute inset-0 w-full h-full object-cover opacity-20 mix-blend-multiply group-hover:scale-110 transition-transform duration-500" 
+                     />
+                   )}
+                   <div className="relative z-10">
+                     <span className="block text-sm text-gray-600 font-medium">{item.date.split('-')[0]}</span>
+                     <span className="block text-xl font-bold text-primary-800">{item.date.split('-').slice(1).join('/')}</span>
+                   </div>
                 </div>
                 <div className="flex-grow">
                    <div className="flex items-center gap-2 mb-2">
                       <span className={`text-xs px-2 py-0.5 rounded border ${
                         item.category === 'Event' ? 'border-orange-200 text-orange-600 bg-orange-50' :
                         item.category === 'Notice' ? 'border-red-200 text-red-600 bg-red-50' :
+                        item.category === 'News' ? 'border-green-200 text-green-600 bg-green-50' :
+                        item.category === 'Intro' ? 'border-blue-200 text-blue-600 bg-blue-50' :
                         'border-primary-200 text-primary-600 bg-primary-50'
                       }`}>
-                        {item.category}
+                        {item.category === 'Event' ? '会议' : 
+                         item.category === 'Notice' ? '通知' : 
+                         item.category === 'News' ? '新闻' :
+                         item.category === 'Intro' ? '介绍' : item.category}
                       </span>
                    </div>
                    <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">{item.title}</h3>

@@ -27,10 +27,12 @@ const NewsDetail: React.FC = () => {
              <span className={`inline-flex items-center px-3 py-1 rounded-full font-medium ${
                newsItem.category === 'Event' ? 'bg-orange-100 text-orange-700' : 
                newsItem.category === 'Notice' ? 'bg-red-100 text-red-700' : 
+               newsItem.category === 'News' ? 'bg-green-100 text-green-700' :
+               newsItem.category === 'Intro' ? 'bg-blue-100 text-blue-700' :
                'bg-primary-100 text-primary-700'
              }`}>
                <Tag className="w-3 h-3 mr-2" />
-               {newsItem.category === 'Event' ? '会议' : newsItem.category === 'Notice' ? '通知' : '新闻'}
+               {newsItem.category === 'Event' ? '会议' : newsItem.category === 'Notice' ? '通知' : newsItem.category === 'News' ? '新闻' : '介绍'}
              </span>
              <span className="inline-flex items-center text-gray-500">
                <Calendar className="w-4 h-4 mr-2" />

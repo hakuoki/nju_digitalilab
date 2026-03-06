@@ -17,7 +17,8 @@ export const NEWS_DATA: NewsItem[] = [
     date: '2025-12-31',
     category: 'News',
     summary: '为响应新时代人文研究新趋势，推动人工智能技术与历史学的深度融合，南京大学历史学院数字史学研究中心数智文献实验室联合南京大学软件学院开发的“南京大学数智文献处理平台”已正式建成，将于2026年1月5日向学界隆重引介。本平台致力于成为历史学者的专业数智工作台。现将其核心功能介绍如下',
-    link: 'https://mp.weixin.qq.com/s/FHZZHNdAK0QPMy1bgPYqRg'
+    link: 'https://mp.weixin.qq.com/s/FHZZHNdAK0QPMy1bgPYqRg',
+    image: ''
   },
   {
     id: '2',
@@ -33,6 +34,7 @@ export const NEWS_DATA: NewsItem[] = [
     date: '2026-01-04',
     category: 'Notice',
     summary: '南京大学数智文献处理平台暨近代红色资源库发布会将于明日举行',
+    image: 'images/huiyi.png',
     content: `
       <p>南京大学数智文献处理平台暨近代红色资源库发布会将于明日举行，我们收到了各位师友的踊跃报名，感谢支持！自今日12:00起不再接收新的申请，敬请期待本次会议纪要。</p>
       <div class="my-6 flex flex-col items-center">
@@ -48,7 +50,79 @@ export const NEWS_DATA: NewsItem[] = [
     category: 'News',
     summary: '2026年1月5日，由南京大学历史学院数智史学实验室主办的南京大学数智文献处理平台暨近代红色资源库发布会顺利举行。本次发布会旨在向学界展示“南京大学数智文献处理平台”及“近代红色资源库”的建设成果。',
     link: 'https://mp.weixin.qq.com/s/7MR_fZgqesjPENbVxpLznA'
-  }
+  },
+  {
+    id: '5',
+    title: '通告｜数智文献处理平台正式上线',
+    date: '2026-3-04',
+    category: 'News',
+    summary: '数智文献处理平台正式上线，欢迎广大历史学者注册使用！',
+    link: 'https://mp.weixin.qq.com/s/vWlJ4_mTHdHGOkIr36l9wQ'
+  },
+  {
+    id: '6',
+    title: '资料译介｜《外国观察者眼中的中共抗战：美军观察组延安机密档案》',
+    date: '2026-1-04',
+    category: 'Intro',
+    summary: '数智文献处理平台文献资料译介：《外国观察者眼中的中共抗战：美军观察组延安机密档案》',
+    link: 'https://mp.weixin.qq.com/s/5NFe6PQgVoWdqPmvW38e0w'
+  },
+  {
+    id: '7',
+    title: '课程案例｜AI助力下战争行军图绘制的初步探索',
+    date: '2026-1-04',
+    category: 'Intro',
+    summary: '课程《人工智能与中国近代史研究》优秀作业展示',
+    link: 'https://mp.weixin.qq.com/s/55AlYeqhBRO8BgXxW3MxDQ'
+  },
+  {
+    id: '8',
+    title: '平台数据库介绍｜明清海洋史研究多语种文献数据库·（1）所收文献简介',
+    date: '2026-1-08',
+    category: 'Intro',
+    summary: '“明清海洋史研究多语种文献数据库”，由南京大学历史学院明史研究中心与南京大学历史学院数智文献实验室联合打造。截至目前，本数据库收录的文献系明史研究中心李庆老师及其学生个人搜集的部分资料。文献语种丰富，涵盖中文、英文、日文、葡萄牙文、西班牙文、意大利文、法文、拉丁文等；规模颇为可观，总计逾 1000 册，总页数超 30 万页，总字数突破 7 亿字。未来，该数据库还将不断入库更多文献。',
+    link: 'https://mp.weixin.qq.com/s/Wx1cdMh1xxtCYPztLUxzZQ'
+  },
+  {
+    id: '9',
+    title: '资料译介｜日文专题（1）《木戶幸一日記》',
+    date: '2026-1-21',
+    category: 'Intro',
+    summary: '数智文献处理平台文献资料译介：《木戶幸一日記》',
+    link: 'https://mp.weixin.qq.com/s/QS4i-bM8Q4sIGCp1S7m5IQ'
+    },
+  {
+    id: '10',
+    title: '资料译介｜《二十世纪俄中关系》',
+    date: '2026-1-26',
+    category: 'Intro',
+    summary: '数智文献处理平台文献资料译介：《二十世纪俄中关系》',
+    link: 'https://mp.weixin.qq.com/s/pLHCibUDVSoV3YVmHq4iDA'
+  },
+  {
+    id: '11',
+    title: '明清海洋史研究多语种文献数据库（公开版）第一辑',
+    date: '2026-3-04',
+    category: 'Intro',
+    summary: '依托南京大学数智文献处理平台建设的明清海洋史研究多语种文献数据库（公开版）开放说明',
+    link: 'https://mp.weixin.qq.com/s/ph14V6ihm19fqte1CgWeuA'
+  },
+    {
+    id: '12',
+    title: '“南京大学近代红色资源库”更新简介',
+    date: '2026-3-04',
+    category: 'News',
+    summary: '“南京大学近代红色资源库”更新简介',
+    link: 'https://mp.weixin.qq.com/s/7ktpMANSiB-l_F0v51EM1Q'
+  },
+  {
+    id: '13',
+    title: '数智文献平台多语言手写文献实测案例拆解',
+    date: '2026-3-04',
+    category: 'Notice',
+    summary: '数智文献平台多语言手写文献实测案例拆解与计费说明',
+    link: 'https://mp.weixin.qq.com/s/OfhWzLVA7zU-0bu4rdZydw'
+  },
 ];
 
 // 公开群组

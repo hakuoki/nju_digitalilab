@@ -2,10 +2,11 @@ export interface NewsItem {
   id: string;
   title: string;
   date: string;
-  category: 'News' | 'Event' | 'Notice';
+  category: 'News' | 'Event' | 'Notice' | 'Intro';
   summary?: string;
   content?: string; // HTML content for the detail page
   link?: string;
+  image?: string; // Optional image for the news item
 }
 
 export interface Group {
