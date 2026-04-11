@@ -123,6 +123,30 @@ export const NEWS_DATA: NewsItem[] = [
     summary: '数智文献平台多语言手写文献实测案例拆解与计费说明',
     link: 'https://mp.weixin.qq.com/s/OfhWzLVA7zU-0bu4rdZydw'
   },
+  {
+    id: '14',
+    title: '基于《杨格档案》的AI史料长编与AI文献助理使用案例',
+    date: '2026-3-13',
+    category: 'Intro',
+    summary: '基于《杨格档案》的AI史料长编与AI文献助理使用案例',
+    link: 'https://mp.weixin.qq.com/s/m2irmzorMMzcdC8wOYh6LQ'
+  },
+  {
+    id: '15',
+    title: '平台数据库介绍｜近代日语文献库（一）·史料库介绍',
+    date: '2026-3-21',
+    category: 'Intro',  
+    summary: '数智文献处理平台近代日语文献库介绍',
+    link: 'https://mp.weixin.qq.com/s/zgvsfaGfwJ1QCatLzltZvA'
+  },
+  {
+    id: '16',
+    title: '南京大学“我用AI写历史”学术论文竞赛｜征稿启事',
+    date: '2026-3-30',
+    category: 'Notice',  
+    summary: '南京大学“我用AI写历史”学术论文竞赛｜征稿启事',
+    link: 'https://mp.weixin.qq.com/s/_oXxjj39Ml4UVMnrFj3E-g'
+  }
 ];
 
 // 公开群组
