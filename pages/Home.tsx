@@ -1,13 +1,11 @@
 import React from 'react';
 import SectionCard from '../components/SectionCard';
+import NewsCarousel from '../components/NewsCarousel';
 import { NEWS_DATA, GROUPS_DATA, MEMBERS_DATA, ADVISORS_DATA, PROJECTS_DATA } from '../data';
-import { Calendar, FileText, User, Layers, ArrowRight, Users, Award } from 'lucide-react';
+import { FileText, Layers, ArrowRight, Users, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Home: React.FC = () => {
-  const recentNews = [...NEWS_DATA]
-    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
-    .slice(0, 4);
   const featuredGroups = GROUPS_DATA.slice(0, 5);
   
   // Combine Research Team (1-4) and Advisors (1-2)
@@ -122,52 +120,14 @@ const Home: React.FC = () => {
         </div>
       </div>
 
+      {/* Wide News Carousel */}
+      <NewsCarousel news={NEWS_DATA} />
+
       {/* Main Content Grid */}
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-        
-        {/* Left Column (News & Events) - Spans 8 columns on desktop */}
-        <div className="md:col-span-7 space-y-6">
-          <SectionCard title="新闻动态" linkTo="/news" className="h-full">
-            <div className="space-y-4">
-              {recentNews.map((news) => {
-                const newsContent = (
-                  <div className="flex flex-col sm:flex-row sm:items-baseline justify-between border-b border-gray-100 last:border-0 pb-3 last:pb-0 hover:bg-primary-50/30 p-2 rounded transition-colors cursor-pointer">
-                    <div className="flex-1 pr-4">
-                      <span className={`inline-block text-xs font-bold px-2 py-0.5 rounded mr-2 ${
-                        news.category === 'Event' ? 'bg-orange-100 text-orange-700' : 
-                        news.category === 'Notice' ? 'bg-red-100 text-red-700' : 
-                        news.category === 'News' ? 'bg-green-100 text-green-700' :
-                        news.category === 'Intro' ? 'bg-blue-100 text-blue-700' :
-                        'bg-primary-100 text-primary-700'
-                      }`}>
-                        {news.category === 'Event' ? '会议' : 
-                         news.category === 'Notice' ? '通知' : 
-                         news.category === 'News' ? '新闻' :
-                         news.category === 'Intro' ? '介绍' : '新闻'}
-                      </span>
-                      <span className="text-gray-700 font-medium group-hover:text-primary-700 transition-colors">{news.title}</span>
-                    </div>
-                    <span className="text-sm text-gray-400 whitespace-nowrap font-mono">{news.date}</span>
-                  </div>
-                );
 
-                return news.link ? (
-                  <a href={news.link} key={news.id} target="_blank" rel="noopener noreferrer" className="block group">
-                    {newsContent}
-                  </a>
-                ) : (
-                  <Link to={`/news/${news.id}`} key={news.id} className="block group">
-                    {newsContent}
-                  </Link>
-                );
-              })}
-            </div>
-          </SectionCard>
-        </div>
-
-
-        {/* Right Column (People) - Spans 5 columns */}
-        <div className="md:col-span-5">
+        {/* People - Full-width row below the news carousel */}
+        <div className="md:col-span-12">
           <SectionCard title="人员" linkTo="/people">
             <div className="flex h-full divide-x divide-gray-100">
               

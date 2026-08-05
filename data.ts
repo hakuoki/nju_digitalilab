@@ -10,6 +10,8 @@ export const LAB_INFO = {
 };
 
 // 新闻动态
+// image 请填写图床返回的 HTTPS 图片直链（链接应直接打开 jpg/png/webp 图片，而不是图床预览页面）。
+// 示例：image: 'https://cdn.example.com/news/2026-03-30-cover.webp'
 export const NEWS_DATA: NewsItem[] = [
   {
     id: '1',
@@ -129,7 +131,8 @@ export const NEWS_DATA: NewsItem[] = [
     date: '2026-3-13',
     category: 'Intro',
     summary: '基于《杨格档案》的AI史料长编与AI文献助理使用案例',
-    link: 'https://mp.weixin.qq.com/s/m2irmzorMMzcdC8wOYh6LQ'
+    link: 'https://mp.weixin.qq.com/s/m2irmzorMMzcdC8wOYh6LQ',
+    image: 'https://res.cloudinary.com/stuodnkx/image/upload/v1785866634/微信图片_20260805020108_6_8_dnj51s.jpg'
   },
   {
     id: '15',
@@ -137,7 +140,8 @@ export const NEWS_DATA: NewsItem[] = [
     date: '2026-3-21',
     category: 'Intro',  
     summary: '数智文献处理平台近代日语文献库介绍',
-    link: 'https://mp.weixin.qq.com/s/zgvsfaGfwJ1QCatLzltZvA'
+    link: 'https://mp.weixin.qq.com/s/zgvsfaGfwJ1QCatLzltZvA',
+    image: 'https://res.cloudinary.com/stuodnkx/image/upload/v1785865514/3.21_xcdcy4.jpg'
   },
   {
     id: '16',
@@ -145,7 +149,8 @@ export const NEWS_DATA: NewsItem[] = [
     date: '2026-3-30',
     category: 'Notice',  
     summary: '南京大学“我用AI写历史”学术论文竞赛｜征稿启事',
-    link: 'https://mp.weixin.qq.com/s/_oXxjj39Ml4UVMnrFj3E-g'
+    link: 'https://mp.weixin.qq.com/s/_oXxjj39Ml4UVMnrFj3E-g',
+    image: 'https://res.cloudinary.com/stuodnkx/image/upload/v1785866503/微信图片_20260805020026_5_8_dfybug.jpg'
   }
 ];
 
