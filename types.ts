@@ -6,7 +6,7 @@ export interface NewsItem {
   summary?: string;
   content?: string; // HTML content for the detail page
   link?: string;
-  image?: string; // Optional image for the news item
+  image?: string; // 新闻封面：支持图床提供的 HTTPS 图片直链，也兼容 public 下的本地路径
 }
 
 export interface Group {
